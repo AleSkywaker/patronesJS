@@ -1,1 +1,1 @@
-#Patones javascript
+# Patrones javascript
