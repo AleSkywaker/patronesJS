@@ -45,3 +45,23 @@ let PeopleConstructorNormal = function(name, age, state) {
 
 let person5 = new PeopleConstructorNormal("Alicia", 28, "Cordoba");
 person5.printPerson();
+
+//Prototype pattern
+
+let peopleProto = function() {};
+
+peopleProto.prototype.age = 0;
+peopleProto.prototype.name = "No name";
+peopleProto.prototype.state = "No city";
+peopleProto.prototype.printPerson = function() {
+  console.log(
+    `Tu nombre es ${this.name}, vives en ${this.state} y tienes ${this.age}`
+  );
+};
+console.log(peopleProto);
+
+let person6 = new peopleProto();
+person6.name = "Alex Colombo";
+person6.state = "California";
+person6.age = 20;
+person6.printPerson();
