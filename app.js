@@ -70,3 +70,6 @@ peopleProto.prototype.nuevafuncion = function() {
 };
 person6.printPerson();
 person6.nuevafuncion();
+
+console.log("edad" in peopleProto);
+console.log("edad" in person6);
