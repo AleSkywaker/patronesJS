@@ -17,3 +17,18 @@ var person3 = peopleFactory("Patricia", 19, "Valencia");
 person1.printPerson();
 person2.printPerson();
 person3.printPerson();
+
+//Constructor pattern class ES2015
+class PeopleConstructor {
+  constructor(name, age, state) {
+    this.name = name;
+    this.age = age;
+    this.state = state;
+    this.printPerson = function() {
+      console.log(`Tu nombre es ${name}, vives en ${state} y tienes ${age}`);
+    };
+  }
+}
+
+let person4 = new PeopleConstructor("Sky", 55, "otherPlanet");
+person4.printPerson();
