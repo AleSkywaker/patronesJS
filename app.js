@@ -64,4 +64,9 @@ let person6 = new peopleProto();
 person6.name = "Alex Colombo";
 person6.state = "California";
 person6.age = 20;
+peopleProto.prototype.edad = 80;
+peopleProto.prototype.nuevafuncion = function() {
+  console.log("nueva edad", this.edad);
+};
 person6.printPerson();
+person6.nuevafuncion();
