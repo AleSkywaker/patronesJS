@@ -73,3 +73,21 @@ person6.nuevafuncion();
 
 console.log("edad" in peopleProto);
 console.log("edad" in person6);
+
+//Dynamic prototype
+
+let PeopleDymanicProto = function(name, age, state) {
+  this.name = name;
+  this.age = age;
+  this.state = state;
+
+  if (typeof this.printPerson !== "function") {
+    peopleDymanicProto.prototype.printPerson = function() {
+      console.log(
+        `Tu nombre es ${this.name}, vives en ${this.state} y tienes ${this.age}`
+      );
+    };
+  }
+};
+var person7 = new PeopleDymanicProto("Jon", 43, "London");
+person7.printPerson();
