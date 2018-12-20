@@ -32,3 +32,16 @@ class PeopleConstructor {
 
 let person4 = new PeopleConstructor("Sky", 55, "otherPlanet");
 person4.printPerson();
+
+//constructor pattern
+let PeopleConstructorNormal = function(name, age, state) {
+  this.name = name;
+  this.age = age;
+  this.state = state;
+  this.printPerson = function() {
+    console.log(`Tu nombre es ${name}, vives en ${state} y tienes ${age}`);
+  };
+};
+
+let person5 = new PeopleConstructorNormal("Alicia", 28, "Cordoba");
+person5.printPerson();
